@@ -16,3 +16,5 @@ Tech Stack
 2)Backend: Node.js + Express
 3)Database: MongoDB
 4)Authentication: Oauth
+
+For more info : Check out our presentation https://github.com/shyxmz/Deez-Nulls/blob/main/StartHub.pdf
