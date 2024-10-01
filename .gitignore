@@ -1,0 +1,63 @@
+# Global ignores (common for both frontend and backend)
+
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# environment variables
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.production
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# build output
+/build
+/dist
+
+# misc
+.DS_Store
+Thumbs.db
+
+# Frontend-specific ignores
+
+# Only ignore the node_modules inside the frontend
+/frontend/node_modules/
+
+# Environment files (if they exist) should be ignored
+/frontend/.env
+/frontend/.env.local
+/frontend/.env.development
+/frontend/.env.development.local
+/frontend/.env.test
+/frontend/.env.production
+
+# Coverage reports and build files
+/frontend/coverage/
+frontend/build/
+frontend/dist/
+
+# Backend-specific ignores
+
+# Only ignore the node_modules inside the backend
+/backend/node_modules/
+
+# Environment files (if they exist) should be ignored
+/backend/.env
+/backend/.env.local
+/backend/.env.development
+/backend/.env.development.local
+/backend/.env.test
+/backend/.env.production
+
+# Coverage reports and build files
+/backend/coverage/
+backend/build/
+backend/dist/
