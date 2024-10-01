@@ -38,7 +38,7 @@ function Login() {
       if (success) {
         handelSuccess(message);
         setTimeout(() => {
-          navigate("/home");  
+          navigate("/landingpage");  
         }, 1000);
       } else if (error) {
         // Check for specific error messages and provide feedback
