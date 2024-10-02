@@ -52,5 +52,5 @@ Team Members:
 
 *Empowering Startups, Enriching Ecosystems*
 
-![Watch our Presentation](https://github.com/shyxmz/Deez-Nulls/blob/main/StartHub%20(1).gif)
+![Watch our Presentation](https://github.com/shyxmz/Deez-Nulls/blob/main/StartHub.gif)
 
