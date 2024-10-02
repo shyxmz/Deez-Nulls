@@ -35,11 +35,11 @@ const Pricing = () => {
               {/* Updated Link for Know more */}
               <Link
                 to={
-                  option.title === "Free"
+                  option.title === "Startups"
                     ? "/StartupKnowMore"
-                    : option.title === "Pro"
+                    : option.title === "Admin"
                     ? "/AdminKnowMore"
-                    : option.title === "Enterprise"
+                    : option.title === "EIRs"
                     ? "/EirKnowMore"
                     : "#"
                 }
