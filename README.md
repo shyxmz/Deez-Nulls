@@ -1,4 +1,5 @@
 #StartHub
+
 StartHub is a web application designed to streamline KYC (Know Your Customer), progress tracking, and monthly reporting for startups. It also enables EIR (Entrepreneur-in-Residence) and Grants management from submission to fund distribution.
 
 Objective
