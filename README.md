@@ -83,13 +83,13 @@ Provide recommendations for grants or support
 
 Authors
 
-1)Shyam Navinkumar Modi
+1) Shyam Navinkumar Modi
 
-2)Aadi Rakeshkumar Patel
+2) Aadi Rakeshkumar Patel
 
-3)Krishna Suresh Suryawanshi
+3) Krishna Suresh Suryawanshi
 
-4)Yagyansh Vishnukumar Gupta
+4) Yagyansh Vishnukumar Gupta
 
 Acknowledgments
 This project was developed as part of the BitNBuild event.
