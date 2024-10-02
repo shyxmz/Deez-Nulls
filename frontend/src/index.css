@@ -4,4 +4,5 @@
 @tailwind utilities;
 :root {
   font-family: "Poppins", sans-serif;
+  color-scheme: dark;
 }

@@ -1,7 +1,11 @@
 import React from 'react'
-import HeroSection from './HeroSection'
-import FeatureSection from "./FeatureSection";
-import Navbar from "./Navbar";
+import HeroSection from '../page-contents/HeroSection'
+import FeatureSection from "../page-contents/FeatureSection";
+import Navbar from "../page-contents/Navbar";
+import Workflow from '../page-contents/Workflow';
+import Pricing from '../page-contents/Pricing';
+import Testimonials from '../page-contents/Testimonials';
+import Footer from '../page-contents/Footer';
 
 function LandingPage() {
   return (
@@ -10,6 +14,10 @@ function LandingPage() {
     <div className="max-w-7xl mx-auto pt-20 px-6">
     <HeroSection />
     <FeatureSection />
+    <Workflow />
+    <Pricing />
+    <Testimonials />
+    <Footer />
     </div>
     </>
   )

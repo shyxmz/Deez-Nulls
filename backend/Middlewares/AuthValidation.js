@@ -1,34 +1,42 @@
 const joi = require('joi');
 
-// Signup validation middleware
-const signupValidation = (req, res, next) => {
-    const schema = joi.object({
-        name: joi.string().min(3).max(100).required(),
-        email: joi.string().email().required(),
-        password: joi.string().min(4).max(100).required(),
-    });
+    // Signup validation middleware
+    const signupValidation = (req, res, next) => {
+        const schema = joi.object({
+            name: joi.string().min(3).max(100).required(),
+            email: joi.string().email().required(),
+            password: joi.string().min(4).max(100).required(),
+            role: joi.string().valid('startup', 'EIR', 'admin').required(), // Include role validation
+        });
 
-     const { error } = schema.validate(req.body);
-    if (error) {
-        return res.status(400).json({ message: "Bad request", error: error.details[0].message });
-    }
-    next();
-};
+        const { error } = schema.validate(req.body);
+        if (error) {
+            return res.status(400).json({
+                message: "Bad request",
+                error: error.details[0].message
+            });
+        }
+        next();
+    };
 
- const loginValidation = (req, res, next) => {
-    const schema = joi.object({
-        email: joi.string().email().required(),
-        password: joi.string().min(4).max(100).required(),
-    });
- 
-    const { error } = schema.validate(req.body);
-    if (error) {
-        return res.status(400).json({ message: "Bad request", error: error.details[0].message });
-    }
-    next();
-};
+    // Login validation middleware
+    const loginValidation = (req, res, next) => {
+        const schema = joi.object({
+            email: joi.string().email().required(),
+            password: joi.string().min(4).max(100).required(),
+        });
 
-module.exports = {
-    signupValidation,
-    loginValidation,
-};
+        const { error } = schema.validate(req.body);
+        if (error) {
+            return res.status(400).json({
+                message: "Bad request",
+                error: error.details[0].message
+            });
+        }
+        next();
+    };
+
+    module.exports = {
+        signupValidation,
+        loginValidation,
+    };

@@ -4,58 +4,56 @@ import { ToastContainer } from "react-toastify";
 import { handelSuccess, handleError } from "../util";
 
 function Signup() {
-
   const navigate = useNavigate();
-  const [Signininfo, setSignininfo] = useState({
+  const [signinInfo, setSigninInfo] = useState({
     name: "",
     email: "",
     password: "",
+    role: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    const copySigninInfo = { ...Signininfo };
+    const copySigninInfo = { ...signinInfo };
     copySigninInfo[name] = value;
-    setSignininfo(copySigninInfo);
+    setSigninInfo(copySigninInfo);
   };
 
   const handleSignup = async (e) => {
     e.preventDefault();
-    const { name, email, password } = Signininfo;
-    if (!name || !email || !password) {
-      return handleError("Name, email, and password are all required");
+    const { name, email, password, role } = signinInfo;
+    if (!name || !email || !password || !role) {
+      return handleError("All fields are required");
     }
     try {
-      const url = "http://localhost:8080/auth/signup"; // Fixed the URL to 'signup'
+      const url = "http://localhost:8080/auth/signup";
       const response = await fetch(url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(Signininfo),
+        body: JSON.stringify(signinInfo),
       });
       const result = await response.json();
-      const {success,message , error} = result;
+      const { success, message, error } = result;
 
-      if(success){
+      if (success) {
         handelSuccess(message);
         setTimeout(() => {
-          navigate('/login');
-        },  1000);
-      }else if(error)
-      {
-        const details = error?.details[0].message;
+          navigate("/login");
+        }, 1000);
+      } else if (error) {
+        const details = error?.details[0]?.message || "Signup failed";
         handleError(details);
       }
-      console.log(result);
     } catch (err) {
-      handleError("An error occurred during signup");  
+      handleError("An error occurred during signup");
     }
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white">
-      <div className="w-full max-w-md p-8 space-y-6 bg-gray-800 rounded-lg shadow-lg">
+    <div className="flex items-center justify-center min-h-screen bg-gray-800 text-white">
+      <div className="w-full max-w-md p-8 space-y-6 rounded-lg shadow-lg sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/800 ">
         <h1 className="text-2xl font-bold text-center">Sign Up</h1>
 
         <form onSubmit={handleSignup}>
@@ -69,7 +67,7 @@ function Signup() {
               name="name"
               autoFocus
               placeholder="Enter your Name"
-              value={Signininfo.name}
+              value={signinInfo.name}
               className="w-full p-2 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
@@ -83,7 +81,7 @@ function Signup() {
               type="email"
               name="email"
               placeholder="Enter your Email"
-              value={Signininfo.email}
+              value={signinInfo.email}
               className="w-full p-2 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
@@ -96,10 +94,27 @@ function Signup() {
               onChange={handleChange}
               type="password"
               name="password"
-              value={Signininfo.password} // Fixed 'passwor' to 'password'
+              value={signinInfo.password}
               placeholder="Enter your Password"
               className="w-full p-2 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+          </div>
+
+          <div>
+            <label htmlFor="role" className="block mb-1 font-semibold">
+              Role
+            </label>
+            <select
+              onChange={handleChange}
+              name="role"
+              value={signinInfo.role}
+              className="w-full p-2 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="">Select your role</option>
+              <option value="startup">startup</option>
+              <option value="EIR">EIR</option>
+              <option value="admin">admin</option>
+            </select>
           </div>
 
           <button

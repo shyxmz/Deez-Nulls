@@ -8,6 +8,7 @@ function Login() {
   const [loginInfo, setLoginInfo] = useState({
     email: "",
     password: "",
+    role: "startup",  
   });
 
   const handleChange = (e) => {
@@ -21,37 +22,47 @@ function Login() {
     e.preventDefault();
     const { email, password } = loginInfo;
     if (!email || !password) {
-      return handleError("Email and password are required");
+        return handleError("Email and password are required");
     }
-    try {
-      const url = "http://localhost:8080/auth/login";
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(loginInfo),
-      });
-      const result = await response.json();
-      const { success, message, error } = result;
+    
+    console.log('Login Info:', loginInfo);  
 
-      if (success) {
-        handelSuccess(message);
-        setTimeout(() => {
-          navigate("/landingpage");  
-        }, 1000);
-      } else if (error) {
-        // Check for specific error messages and provide feedback
-        const details = error?.details[0]?.message || "Incorrect email or password";
-        handleError(details);
-      } else {
-        handleError("Login failed: Incorrect email or password");
-      }
-      console.log(result);
+    try {
+        const url = "http://localhost:8080/auth/login";
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email, password }),  
+        });
+
+        const result = await response.json();
+        console.log(result);  
+
+        const { success, message, role } = result;
+
+        if (success) {
+            handelSuccess(message);
+            localStorage.setItem('role', role);
+            setTimeout(() => {
+               
+                if (role === 'admin') {
+                    navigate("/adminLanding");
+                } else if (role === 'startup') {
+                    navigate("/startupLanding");
+                } else if(role==='EIR'){
+                    navigate("/investorlanding");
+                }
+            }, 1000);
+        } else {
+            handleError(result.error || "Login failed: Incorrect email or password");
+        }
     } catch (err) {
-      handleError("Enter the correct email and password for login");
+        console.error('Error during login:', err);  
+        handleError("Enter the correct email and password for login");
     }
-  };
+};
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white">
