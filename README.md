@@ -4,25 +4,33 @@ StartHub is a web application designed to streamline KYC (Know Your Customer), p
 
 Objective
 The main objectives of StartHub are:
+
 Streamline KYC, progress tracking, and monthly reporting for startups.
+
 Enable EIR and Grants management from submission to fund distribution.
 
 Key Features
 
 KYC for startups (company details, address, contact)
+
 Track startup progress and reports
+
 Push messages and notifications
+
 EIR and Grants management system
 
 Detailed Features
+
 1. KYC & Progress Tracking
 
 Collect and store startup information
+
 Update and track startup progress over time
 
 2. Monthly Reports
 
 Collect and view monthly startup performance reports
+
 Easy submission of reports (files, text)
 
 3. EIR and Grants Management
