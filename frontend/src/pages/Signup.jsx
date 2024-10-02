@@ -14,9 +14,7 @@ function Signup() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    const copySigninInfo = { ...signinInfo };
-    copySigninInfo[name] = value;
-    setSigninInfo(copySigninInfo);
+    setSigninInfo({ ...signinInfo, [name]: value });
   };
 
   const handleSignup = async (e) => {
@@ -52,77 +50,62 @@ function Signup() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-800 text-white">
-      <div className="w-full max-w-md p-8 space-y-6 rounded-lg shadow-lg sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/800 ">
-        <h1 className="text-2xl font-bold text-center">Sign Up</h1>
+    <section className="bg-gray-700 min-h-screen flex items-center justify-center">
+      <div className="bg-gradient-to-r from-orange-300 to-red-400 backdrop-blur-lg bg-opacity-70 flex rounded-2xl shadow-lg w-[70%] p-5 items-center mx-auto">
+        <div className="md:w-1/2 px-8 md:px-16">
+          <h2 className="font-bold text-5xl text-[#002D74]">Create an Account</h2>
+          <p className="text-s mt-4 text-[#002D74]">
+            Fill in the details to sign up
+          </p>
 
-        <form onSubmit={handleSignup}>
-          <div>
-            <label htmlFor="name" className="block mb-1 font-semibold">
-              Name
-            </label>
+          <form onSubmit={handleSignup} className="flex flex-col gap-4">
             <input
-              onChange={handleChange}
+              className="p-2 mt-8 rounded-xl border"
               type="text"
               name="name"
-              autoFocus
-              placeholder="Enter your Name"
+              placeholder="Name"
               value={signinInfo.name}
-              className="w-full p-2 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="email" className="block mb-1 font-semibold">
-              Email
-            </label>
-            <input
               onChange={handleChange}
+            />
+            <input
+              className="p-2 rounded-xl border"
               type="email"
               name="email"
-              placeholder="Enter your Email"
+              placeholder="Email"
               value={signinInfo.email}
-              className="w-full p-2 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="password" className="block mb-1 font-semibold">
-              Password
-            </label>
-            <input
               onChange={handleChange}
-              type="password"
-              name="password"
-              value={signinInfo.password}
-              placeholder="Enter your Password"
-              className="w-full p-2 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-          </div>
-
-          <div>
-            <label htmlFor="role" className="block mb-1 font-semibold">
-              Role
-            </label>
+            <div className="relative">
+              <input
+                className="p-2 rounded-xl border w-full"
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={signinInfo.password}
+                onChange={handleChange}
+              />
+            </div>
             <select
               onChange={handleChange}
               name="role"
               value={signinInfo.role}
-              className="w-full p-2 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-2 text-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <option value="">Select your role</option>
-              <option value="startup">startup</option>
+              <option value="startup">Startup</option>
               <option value="EIR">EIR</option>
-              <option value="admin">admin</option>
+              {/* <option value="admin">Admin</option> */}
             </select>
-          </div>
+            <button className="bg-[#002D74] rounded-xl text-white py-2 hover:scale-105 duration-300">
+              Sign Up
+            </button>
+          </form>
 
-          <button
-            type="submit"
-            className="w-full p-2 mt-4 font-semibold text-gray-900 bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          >
-            Sign Up
-          </button>
+          <div className="mt-6 grid grid-cols-3 items-center text-gray-400">
+            <hr className="border-gray-400" />
+            <p className="text-black text-center text-sm">OR</p>
+            <hr className="border-gray-400" />
+          </div>
 
           <span className="block mt-4 text-center">
             Already have an account?
@@ -131,11 +114,20 @@ function Signup() {
               Login
             </Link>
           </span>
-        </form>
+        </div>
 
-        <ToastContainer />
+        {/* Include the image directly using a URL */}
+        <div className="hidden md:block md:w-1/2">
+          <img
+            src="https://i.pinimg.com/564x/cb/cb/db/cbcbdb6c48a5f2d423e87f2356540bc8.jpg" // Replace with your image URL
+            alt="Signup"
+            className="w-full h-auto rounded-2xl shadow-lg"
+          />
+        </div>
       </div>
-    </div>
+
+      <ToastContainer />
+    </section>
   );
 }
 
