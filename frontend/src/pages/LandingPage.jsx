@@ -13,10 +13,10 @@ function LandingPage() {
     <Navbar />
     <div className="max-w-7xl mx-auto pt-20 px-6">
     <HeroSection />
-    <FeatureSection />
-    <Workflow />
-    <Pricing />
-    <Testimonials />
+      <FeatureSection id="features" />
+      <Workflow id="workflow" />
+      <Pricing id="pricing" />
+      <Testimonials id="testimonials" />
     <Footer />
     </div>
     </>
