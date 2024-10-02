@@ -41,7 +41,9 @@ Technical Stack
 StartHub is built using the MERN stack:
 
 Frontend: React, CSS (Tailwind), JavaScript
+
 Backend: Node.js, Express.js
+
 Database: MongoDB
 
 Security
