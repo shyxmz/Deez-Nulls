@@ -54,22 +54,31 @@ Admin, Startup and EIR
 
 Admin functionalities :
 View and manage startup KYC information
+
 Track startup progress
+
 Send push messages to startups
+
 Manage EIR and Grants schemes
 
 
 Startup functionalities :
 Submit KYC details
+
 Update progress
+
 Submit monthly reports
+
 View messages from the admin
 
 
 EIR functionalities :
 Review and provide feedback on startup KYC information
+
 Monitor progress
+
 Evaluate reports
+
 Provide recommendations for grants or support
 
 Authors
