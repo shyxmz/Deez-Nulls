@@ -8,11 +8,14 @@ function Login() {
   const [loginInfo, setLoginInfo] = useState({
     email: "",
     password: "",
+    role: "startup",  
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setLoginInfo({ ...loginInfo, [name]: value });
+    const copyLoginInfo = { ...loginInfo };
+    copyLoginInfo[name] = value;
+    setLoginInfo(copyLoginInfo);
   };
 
   const handleLogin = async (e) => {
@@ -21,6 +24,8 @@ function Login() {
     if (!email || !password) {
       return handleError("Email and password are required");
     }
+    
+    console.log('Login Info:', loginInfo);  
 
     try {
       const url = "http://localhost:8080/auth/login";
@@ -29,29 +34,32 @@ function Login() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password }),  
       });
 
       const result = await response.json();
-      const { success, message, role } = result;
+      console.log(result);  
+
+      const { success, message, role ,jwtToken } = result;
 
       if (success) {
         handelSuccess(message);
-        localStorage.setItem('role', role);
+        localStorage.setItem("token", jwtToken);   
+        localStorage.setItem("role", role);
         setTimeout(() => {
           if (role === 'admin') {
             navigate("/adminLanding");
           } else if (role === 'startup') {
             navigate("/startupLanding");
           } else if (role === 'EIR') {
-            navigate("/eirlanding");
+            navigate("/investorLanding");
           }
         }, 1000);
       } else {
         handleError(result.error || "Login failed: Incorrect email or password");
       }
     } catch (err) {
-      console.error('Error during login:', err);
+      console.error('Error during login:', err);  
       handleError("Enter the correct email and password for login");
     }
   };

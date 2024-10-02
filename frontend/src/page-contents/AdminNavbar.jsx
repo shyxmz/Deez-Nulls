@@ -1,7 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react"; 
 import logo from "../assets/logo.png";
-import { navItems } from "../constants/startupneeds";
+import { navItems } from "../constants/adminneeds";
 
 const Navbar = () => {
     const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false); 
@@ -30,7 +30,7 @@ const Navbar = () => {
                     </ul>
                     <div className="hidden lg:flex justify-center space-x-5 items-center">
                         <a
-                            href="/messagelist"
+                            href="/messageform"
                             className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md hover:from-orange-600 hover:to-orange-900 transition duration-300"
                         >
                             Notifications
@@ -59,12 +59,6 @@ const Navbar = () => {
                         <div className="flex space-x-6">
                             <a
                                 href="#"
-                                className="py-2 px-5 border rounded-md hover:bg-gradient-to-r from-orange-500 to-orange-800 hover:text-white transition duration-300"
-                            >
-                                FAQs
-                            </a>
-                            <a
-                                href="/messagelist"
                                 className="py-2 px-3 rounded-md bg-gradient-to-r from-orange-500 to-orange-500 hover:from-orange-600 hover:to-orange-900 transition duration-300"
                             >
                                 Notifications

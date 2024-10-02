@@ -12,6 +12,8 @@ import KycForm from './components/KycForm';
 import ProgressS from './pages/ProgressS';
 import ProgressE from './pages/ProgressE';
 import ShortListed from './pages/ShortListed';
+import MessageForm from './components/MessageForm';
+import MessageList from './components/MessageList';
 function App() {
   return (
     <div className="">
@@ -30,6 +32,8 @@ function App() {
         <Route path="/progressS" element={<ProgressS />} />
         <Route path="/progressE" element={<ProgressE />} />
         <Route path="/shortlisted" element={<ShortListed />} />
+        <Route path="/messageform" element={<MessageForm />} />
+        <Route path="/messagelist" element={<MessageList />} />
 
       </Routes>
     </div>

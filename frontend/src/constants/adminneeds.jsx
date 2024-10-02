@@ -13,8 +13,8 @@ import user5 from "../assets/profile-pictures/user5.jpg";
 import user6 from "../assets/profile-pictures/user6.jpg";
 
 export const navItems = [
-  { label: 'Progress', href: '/ProgressE' },
-  { label: 'Shortlisted', href: '/ShortListed'},
+  { label: 'Validate', href: '#' },
+  { label: 'Send Messages/Info', href: '#'},
 ];
 
 export const testimonials = [
@@ -41,21 +41,21 @@ export const testimonials = [
 export const features = [
   {
     icon: <BotMessageSquare />,
-    text: "Grants Management",
+    text: "Drag-and-Drop Interface",
     description:
-      "Comprehensive tools for managing grant schemes, including application processing, shortlisting, selection, and fund disbursement tracking.",
+      "Easily design and arrange your VR environments with a user-friendly drag-and-drop interface.",
   },
   {
     icon: <Fingerprint />,
-    text: "Progress Tracking",
+    text: "Multi-Platform Compatibility",
     description:
-      "Monitor and visualize the growth and development of startups over time with intuitive progress tracking tools.",
+      "Build VR applications that run seamlessly across multiple platforms, including mobile, desktop, and VR headsets.",
   },
   {
     icon: <ShieldHalf />,
-    text: "Startup KYC Management",
+    text: "Built-in Templates",
     description:
-      "Easily collect and manage crucial Know Your Customer information from startups, including company details, address, and contact information.",
+      "Jumpstart your VR projects with a variety of built-in templates for different types of applications and environments.",
   }
 ];
 
