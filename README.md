@@ -74,18 +74,6 @@ Get StartHub up and running in your ecosystem, and watch your startups reach for
 
 ---
 
-### Team Members:
-1. **Shyam Modi** - Frontend development, responsive UI components
-2. **Aadi Patel** - Backend development, database schema, JWT integration
-3. **Yagyansh Gupta** - Backend development, database schema, presentation and demo creation
-4. **Krishna Suryawanshi** - Frontend development, UI/UX design, project documentation
-
-*Empowering Startups, Enriching Ecosystems*
-
-![Watch our Presentation](https://github.com/shyxmz/Deez-Nulls/blob/main/StartHub.gif)
-
----
-
 ## 💻 How to Run the Code:
 
 1. **Clone the repository** to your local machine:
@@ -130,6 +118,17 @@ Get StartHub up and running in your ecosystem, and watch your startups reach for
 
 7. After completing these steps, the web application will be up and running. You can access it in your browser to explore and demo the features!
 
+ ---
+ 
+### Team Members:
+1. **Shyam Modi** - Frontend development, responsive UI components
+2. **Aadi Patel** - Backend development, database schema, JWT integration
+3. **Yagyansh Gupta** - Backend development, database schema, presentation and demo creation
+4. **Krishna Suryawanshi** - Frontend development, UI/UX design, project documentation
+
+*Empowering Startups, Enriching Ecosystems*
+
+![Watch our Presentation](https://github.com/shyxmz/Deez-Nulls/blob/main/StartHub.gif)
+
 ---
 
-Good luck with your presentation! Let me know if you need any further modifications.
