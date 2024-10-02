@@ -79,10 +79,21 @@ Get StartHub up and running in your ecosystem, and watch your startups reach for
 
 Built with ❤️ by the StartHub Team
 Team Members:
-1. Shyam Navinkumar Modi (Frontend of the website)
-2. Aadi Rakeshkumar Patel (Backend of the website)
-3. Yagyansh Vishnukumar Gupta (Backend & design of the website, presentation)
-4. Krishna Sureshkumar Suryawanshi (Design & frontend of the website)
+1. Shyam Modi
+  - Led the frontend development
+  - Created responsive UI components
+2. Aadi Patel
+  - Led the backend development
+  - Designed and implemented the database schema
+  - Integrated JWT authentication
+3. Yagyansh Gupta
+  - Contributed to backend development
+  - Contributed to the database schema
+  - Helped in creation of presentation and demo video
+4. Krishna Suryawanshi
+  - Contributed to frontend development
+  - Helped in designing the user experience and interface
+  - Managed project documentation and README creation
 
 *Empowering Startups, Enriching Ecosystems*
 
