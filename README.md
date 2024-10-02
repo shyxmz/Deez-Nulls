@@ -17,4 +17,3 @@ Tech Stack
 3)Database: MongoDB
 4)Authentication: JWT Authentication
 
-For more info : Check out our presentation https://github.com/shyxmz/Deez-Nulls/blob/main/StartHub.pdf
