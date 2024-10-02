@@ -52,7 +52,7 @@ function Login() {
           } else if (role === 'startup') {
             navigate("/startupLanding");
           } else if (role === 'EIR') {
-            navigate("/investorLanding");
+            navigate("/eirlanding");
           }
         }, 1000);
       } else {
