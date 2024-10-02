@@ -31,7 +31,7 @@ const Navbar = () => {
                     </ul>
                     <div className="hidden lg:flex justify-center space-x-5 items-center">
                         <a
-                            href="#"
+                            href="/FAQs"
                             className="py-2 px-5 border rounded-md hover:bg-gradient-to-r from-orange-500 to-orange-800 hover:text-white transition duration-300"
                         >
                             FAQs

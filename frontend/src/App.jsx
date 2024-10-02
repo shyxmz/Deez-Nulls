@@ -14,6 +14,10 @@ import ProgressE from './pages/ProgressE';
 import ShortListed from './pages/ShortListed';
 import MessageForm from './components/MessageForm';
 import MessageList from './components/MessageList';
+import FAQs from './pages/FAQs';
+import ReportList from './components/ReportList';
+import ReportUpload from './components/ReportUpload';
+import ValidateS from './pages/ValidateS';
 function App() {
   return (
     <div className="">
@@ -34,7 +38,10 @@ function App() {
         <Route path="/shortlisted" element={<ShortListed />} />
         <Route path="/messageform" element={<MessageForm />} />
         <Route path="/messagelist" element={<MessageList />} />
-
+        <Route path="/faqs" element={<FAQs />} />
+        <Route path="/reportlist" element={<ReportList />} />
+        <Route path="/reportupload" element={<ReportUpload />} />
+        <Route path="/validatess" element={<ValidateS />} />
       </Routes>
     </div>
   );

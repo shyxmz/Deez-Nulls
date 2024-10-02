@@ -3,6 +3,7 @@ import KycForm from '../components/KycForm'
 import StartupNavbar from '../page-contents/StartupNavbar';
 import StartupHeroSection from '../page-contents/StartupHeroSection';
 import StartupFeatureSection from '../page-contents/StartupFeatureSection';
+import Footer from '../page-contents/Footer';
 const StartupLanding = () => {
   return (
     <>
@@ -10,6 +11,7 @@ const StartupLanding = () => {
     <div className="max-w-7xl mx-auto pt-20 px-6">
     <StartupHeroSection />
     <StartupFeatureSection />
+    <Footer />
     </div>
     </>
   )

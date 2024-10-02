@@ -4,6 +4,7 @@ const FileStore = require('session-file-store')(session);
 const http = require("http");
 const socketIO = require("socket.io");
 const bodyparser = require("body-parser");
+const reportRoutes = require('./Routes/reportroutes');
 const cors = require("cors");
 require("dotenv").config();
 
@@ -25,6 +26,8 @@ const io = socketIO(server, {
 
  
 app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({ extended: true }));
+app.use(express.static('uploads'));
 app.use(cors());
 app.use(session({
   store: new FileStore({ path: './sessions' }),   
@@ -42,6 +45,7 @@ app.use((req, res, next) => {
 app.use("/auth", AuthRouter);
 app.use("/api", kycRoutes);
 app.use("/api/messages", messageRoutes);  
+app.use('/report', reportRoutes);
 
 app.get("/ping", (req, res) => {
   res.send("PONG");

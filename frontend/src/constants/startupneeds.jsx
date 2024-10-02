@@ -15,7 +15,7 @@ import user6 from "../assets/profile-pictures/user6.jpg";
 export const navItems = [
   { label: 'KYC Form', href: '/kyc' },
   { label: 'Progress', href: '/ProgressS' },
-  { label: 'Reports', href: '/reports' },
+  { label: 'Reports', href: '/reportupload' },
 ];
 
 export const testimonials = [
@@ -60,21 +60,21 @@ export const testimonials = [
 export const features = [
   {
     icon: <BotMessageSquare />,
-    text: "Drag-and-Drop Interface",
+    text: "Startup KYC Management",
     description:
-      "Easily design and arrange your VR environments with a user-friendly drag-and-drop interface.",
+      " Easily collect and manage crucial Know Your Customer information from startups, including company details, address, and contact information.",
   },
   {
     icon: <Fingerprint />,
-    text: "Multi-Platform Compatibility",
+    text: "Progress Tracking",
     description:
-      "Build VR applications that run seamlessly across multiple platforms, including mobile, desktop, and VR headsets.",
+      "Monitor and visualize the growth and development of startups over time with intuitive progress tracking tools.",
   },
   {
     icon: <ShieldHalf />,
-    text: "Built-in Templates",
+    text: "Monthly Reporting",
     description:
-      "Jumpstart your VR projects with a variety of built-in templates for different types of applications and environments.",
+      "Streamline the collection and review of monthly performance reports from startups, supporting various file formats and text submissions.",
   }
 ];
 
@@ -135,25 +135,19 @@ export const pricingOptions = [
 ];
 
 export const resourcesLinks = [
-  { href: "#", text: "Getting Started" },
-  { href: "#", text: "Documentation" },
-  { href: "#", text: "Tutorials" },
-  { href: "#", text: "API Reference" },
+  { href: "#", text: "FAQs" },
   { href: "#", text: "Community Forums" },
+  { href: "#", text: "Updates" }
 ];
 
 export const platformLinks = [
   { href: "#", text: "Features" },
-  { href: "#", text: "Supported Devices" },
-  { href: "#", text: "System Requirements" },
-  { href: "#", text: "Downloads" },
   { href: "#", text: "Release Notes" },
+  { href: "#", text: "Github" }
 ];
 
 export const communityLinks = [
   { href: "#", text: "Events" },
-  { href: "#", text: "Meetups" },
-  { href: "#", text: "Conferences" },
-  { href: "#", text: "Hackathons" },
-  { href: "#", text: "Jobs" },
+  { href: "#", text: "About Us" },
+  { href: "#", text: "Contact Us" },
 ];

@@ -24,155 +24,149 @@ export const testimonials = [
     user: "John Doe",
     company: "Stellar Solutions",
     image: user1,
-    text: "I am extremely satisfied with the services provided. The team was responsive, professional, and delivered results beyond my expectations.",
+    text: "The platform has been a game-changer for us. From startup KYC management to progress tracking, it made our workflow smooth and efficient. I highly recommend it!",
   },
   {
     user: "Jane Smith",
     company: "Blue Horizon Technologies",
     image: user2,
-    text: "I couldn't be happier with the outcome of our project. The team's creativity and problem-solving skills were instrumental in bringing our vision to life",
+    text: "The ability to manage grants and monthly reports all in one place has saved us so much time. The platform’s intuitive design and reliable notifications keep us on top of everything",
   },
   {
     user: "David Johnson",
     company: "Quantum Innovations",
     image: user3,
-    text: "Working with this company was a pleasure. Their attention to detail and commitment to excellence are commendable. I would highly recommend them to anyone looking for top-notch service.",
+    text: "The progress tracking feature is fantastic. We’ve been able to visualize our growth effectively and present clean, professional reports to our investors every month.",
   },
   {
     user: "Ronee Brown",
     company: "Fusion Dynamics",
     image: user4,
-    text: "Working with the team at XYZ Company was a game-changer for our project. Their attention to detail and innovative solutions helped us achieve our goals faster than we thought possible. We are grateful for their expertise and professionalism!",
+    text: "Incredible! The startup KYC process has never been easier. The team behind the platform really understands the needs of startups and offers exactly what we were looking for.",
   },
   {
     user: "Michael Wilson",
     company: "Visionary Creations",
     image: user5,
-    text: "I am amazed by the level of professionalism and dedication shown by the team. They were able to exceed our expectations and deliver outstanding results.",
+    text: "This platform has streamlined our entire startup management process. The grant management tools are especially impressive, and the push notifications keep us informed instantly.",
   },
   {
     user: "Emily Davis",
     company: "Synergy Systems",
     image: user6,
-    text: "The team went above and beyond to ensure our project was a success. Their expertise and dedication are unmatched. I look forward to working with them again in the future.",
+    text: "Managing multiple startups has been effortless with this platform. From KYC to grants, everything is in one place, making it easier to track and stay organized. Fantastic service!",
   },
 ];
 
 export const features = [
   {
     icon: <BotMessageSquare />,
-    text: "Drag-and-Drop Interface",
+    text: "Startup KYC Management",
     description:
-      "Easily design and arrange your VR environments with a user-friendly drag-and-drop interface.",
+      " Easily collect and manage crucial Know Your Customer information from startups, including company details, address, and contact information.",
   },
   {
     icon: <Fingerprint />,
-    text: "Multi-Platform Compatibility",
+    text: "Progress Tracking",
     description:
-      "Build VR applications that run seamlessly across multiple platforms, including mobile, desktop, and VR headsets.",
+      "Monitor and visualize the growth and development of startups over time with intuitive progress tracking tools.",
   },
   {
     icon: <ShieldHalf />,
-    text: "Built-in Templates",
+    text: "Monthly Reporting",
     description:
-      "Jumpstart your VR projects with a variety of built-in templates for different types of applications and environments.",
+      "Streamline the collection and review of monthly performance reports from startups, supporting various file formats and text submissions.",
   },
   {
     icon: <BatteryCharging />,
-    text: "Real-Time Preview",
+    text: "Push Notifications",
     description:
-      "Preview your VR application in real-time as you make changes, allowing for quick iterations and adjustments.",
+      "Keep startups informed with a robust messaging system, allowing admins to send important updates and information directly to users.",
   },
   {
     icon: <PlugZap />,
-    text: "Collaboration Tools",
+    text: "EIR Scheme Management",
     description:
-      "Work together with your team in real-time on VR projects, enabling seamless collaboration and idea sharing.",
+      "Efficiently manage Entrepreneur-in-Residence programs, from application collection to selection status updates.",
   },
   {
     icon: <GlobeLock />,
-    text: "Analytics Dashboard",
+    text: " Grants Management",
     description:
-      "Gain valuable insights into user interactions and behavior within your VR applications with an integrated analytics dashboard.",
+      "Comprehensive tools for managing grant schemes, including application processing, shortlisting, selection, and fund disbursement tracking.",
   },
 ];
 
 export const checklistItems = [
   {
-    title: "Code merge made easy",
+    title: "Comprehensive Startup KYC Management:",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      " Easily gather and manage essential KYC details for startups, including company info and contacts.",
   },
   {
-    title: "Review code without worry",
+    title: "Progress Tracking Made Simple:",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Track startup growth and key milestones with intuitive tools for easy visualization.",
   },
   {
-    title: "AI Assistance to reduce time",
+    title: "Streamlined Monthly Reporting:",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Simplify monthly report collection with support for multiple file formats and text submissions.",
   },
   {
-    title: "Share work in minutes",
+    title: "Effective Grants Management:",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Manage grant applications, shortlisting, selection, and fund tracking efficiently.",
   },
 ];
 
 export const pricingOptions = [
   {
-    title: "Free",
-    price: "$0",
+    title: "Startups",
+    price: "StartHub",
     features: [
-      "Private board sharing",
-      "5 Gb Storage",
-      "Web Analytics",
-      "Private Mode",
+      "Seamless Connections with EIRs",
+      "Notification about Status and Updates",
+      "KYC Form and report generation",
+      "Progress Tracking",
     ],
   },
   {
-    title: "Pro",
-    price: "$10",
+    title: "Admin",
+    price: "StartHub",
     features: [
-      "Private board sharing",
-      "10 Gb Storage",
-      "Web Analytics (Advance)",
-      "Private Mode",
+      "Validate Startups for the EIRs",
+      "Push messages/info on go to all Startups",
+      "Maintain and Control the platform",
+      "Keep the EIRs and Startups Updated",
     ],
   },
   {
-    title: "Enterprise",
-    price: "$200",
+    title: "EIRs",
+    price: "StartHub",
     features: [
-      "Private board sharing",
-      "Unlimited Storage",
-      "High Performance Network",
-      "Private Mode",
+      "Access to Shortlisted Startups",
+      "Seamless Grants Management",
+      "Track Progress of Startups",
+      "Recieve notification about Schemes from Admin",
     ],
   },
 ];
 
 export const resourcesLinks = [
-  { href: "#", text: "Getting Started" },
-  { href: "#", text: "Documentation" },
-  { href: "#", text: "Tutorials" },
-  { href: "#", text: "API Reference" },
+  { href: "#", text: "FAQs" },
   { href: "#", text: "Community Forums" },
+  { href: "#", text: "Updates" }
 ];
 
 export const platformLinks = [
   { href: "#", text: "Features" },
-  { href: "#", text: "Supported Devices" },
-  { href: "#", text: "System Requirements" },
-  { href: "#", text: "Downloads" },
   { href: "#", text: "Release Notes" },
+  { href: "#", text: "Github" }
 ];
 
 export const communityLinks = [
   { href: "#", text: "Events" },
-  { href: "#", text: "Meetups" },
-  { href: "#", text: "Conferences" },
-  { href: "#", text: "Hackathons" },
-  { href: "#", text: "Jobs" },
+  { href: "#", text: "About Us" },
+  { href: "#", text: "Contact Us" },
 ];

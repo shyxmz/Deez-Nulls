@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function KycForm() {
   const [kycInfo, setKycInfo] = useState({
@@ -11,6 +12,9 @@ function KycForm() {
     companyState: "",
     companyZip: "",
   });
+
+  const [notification, setNotification] = useState({ message: "", type: "" });
+  const navigate = useNavigate(); // Initialize the navigate function
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,144 +34,123 @@ function KycForm() {
 
       const result = await response.json();
       if (result.success) {
-        alert("KYC form submitted successfully!");
+        setNotification({ message: "KYC form submitted successfully!", type: "success" });
+        setTimeout(() => {
+          navigate("/startupLanding"); // Redirect to startupLanding page
+        }, 2000); // Redirect after 2 seconds
       } else {
-        alert("Submission failed, please try again.");
+        setNotification({ message: "Submission failed, please try again.", type: "error" });
       }
     } catch (error) {
-      alert("Error submitting form. Please check your connection.");
+      setNotification({ message: "Error submitting form. Please check your connection.", type: "error" });
     }
   };
 
   return (
-    <section className="bg-gray-700 min-h-1/2 flex items-center justify-center">
+    <section className="bg-gray-700 min-h-screen flex items-center justify-center relative">
       <div className="bg-gradient-to-r from-orange-300 to-red-400 backdrop-blur-lg bg-opacity-70 flex rounded-2xl shadow-lg w-[70%] p-5 items-center mx-auto">
-        <div className="w-full max-w-2xl p-8">
-          <h1 className="text-3xl font-bold text-[#002D74] text-center mb-6">KYC Form</h1>
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Company Details */}
-            <div>
-              <label className="block mb-1 font-semibold text-white">Company Name</label>
-              <input
-                type="text"
-                name="companyName"
-                value={kycInfo.companyName}
-                onChange={handleChange}
-                placeholder="Enter your company name"
-                className="w-full p-3 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
+        <div className="md:w-1/2 px-8 md:px-16">
+          <h2 className="font-bold text-5xl text-[#002D74] text-center">KYC Form</h2>
+          <p className="text-s mt-4 text-[#002D74] text-center">
+            Fill in the details to complete your KYC
+          </p>
 
-            {/* Contact Person */}
-            <div>
-              <label className="block mb-1 font-semibold text-white">Contact Person</label>
-              <input
-                type="text"
-                name="contactPerson"
-                value={kycInfo.contactPerson}
-                onChange={handleChange}
-                placeholder="Enter contact person's name"
-                className="w-full p-3 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-
-            {/* Contact Email */}
-            <div>
-              <label className="block mb-1 font-semibold text-white">Contact Email</label>
-              <input
-                type="email"
-                name="contactEmail"
-                value={kycInfo.contactEmail}
-                onChange={handleChange}
-                placeholder="Enter contact email"
-                className="w-full p-3 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-
-            {/* Contact Phone */}
-            <div>
-              <label className="block mb-1 font-semibold text-white">Contact Phone</label>
-              <input
-                type="text"
-                name="contactPhone"
-                value={kycInfo.contactPhone}
-                onChange={handleChange}
-                placeholder="Enter contact phone number"
-                className="w-full p-3 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-
-            {/* Address */}
-            <div>
-              <label className="block mb-1 font-semibold text-white">Company Address</label>
-              <textarea
-                name="companyAddress"
-                value={kycInfo.companyAddress}
-                onChange={handleChange}
-                placeholder="Enter company address"
-                className="w-full p-3 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              ></textarea>
-            </div>
-
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-6">
+            <input
+              type="text"
+              name="companyName"
+              value={kycInfo.companyName}
+              onChange={handleChange}
+              placeholder="Company Name"
+              className="p-2 rounded-xl border"
+              required
+            />
+            <input
+              type="text"
+              name="contactPerson"
+              value={kycInfo.contactPerson}
+              onChange={handleChange}
+              placeholder="Contact Person"
+              className="p-2 rounded-xl border"
+              required
+            />
+            <input
+              type="email"
+              name="contactEmail"
+              value={kycInfo.contactEmail}
+              onChange={handleChange}
+              placeholder="Contact Email"
+              className="p-2 rounded-xl border"
+              required
+            />
+            <input
+              type="text"
+              name="contactPhone"
+              value={kycInfo.contactPhone}
+              onChange={handleChange}
+              placeholder="Contact Phone"
+              className="p-2 rounded-xl border"
+              required
+            />
+            <textarea
+              name="companyAddress"
+              value={kycInfo.companyAddress}
+              onChange={handleChange}
+              placeholder="Company Address"
+              className="p-2 rounded-xl border"
+              required
+            ></textarea>
             <div className="grid grid-cols-2 gap-4">
-              {/* City */}
-              <div>
-                <label className="block mb-1 font-semibold text-white">City</label>
-                <input
-                  type="text"
-                  name="companyCity"
-                  value={kycInfo.companyCity}
-                  onChange={handleChange}
-                  placeholder="City"
-                  className="w-full p-3 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-              </div>
-
-              {/* State */}
-              <div>
-                <label className="block mb-1 font-semibold text-white">State</label>
-                <input
-                  type="text"
-                  name="companyState"
-                  value={kycInfo.companyState}
-                  onChange={handleChange}
-                  placeholder="State"
-                  className="w-full p-3 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-              </div>
-            </div>
-
-            {/* Zip */}
-            <div>
-              <label className="block mb-1 font-semibold text-white">Zip Code</label>
               <input
                 type="text"
-                name="companyZip"
-                value={kycInfo.companyZip}
+                name="companyCity"
+                value={kycInfo.companyCity}
                 onChange={handleChange}
-                placeholder="Zip Code"
-                className="w-full p-3 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="City"
+                className="p-2 rounded-xl border"
+                required
+              />
+              <input
+                type="text"
+                name="companyState"
+                value={kycInfo.companyState}
+                onChange={handleChange}
+                placeholder="State"
+                className="p-2 rounded-xl border"
                 required
               />
             </div>
-
-            {/* Submit Button */}
-            <button
-              type="submit"
-              className="w-full p-3 mt-6 font-semibold text-white bg-[#002D74] rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            >
+            <input
+              type="text"
+              name="companyZip"
+              value={kycInfo.companyZip}
+              onChange={handleChange}
+              placeholder="Zip Code"
+              className="p-2 rounded-xl border"
+              required
+            />
+            <button className="bg-[#002D74] rounded-xl text-white py-2 hover:scale-105 duration-300">
               Submit KYC
             </button>
           </form>
         </div>
+
+        {/* Optional image section */}
+        <div className="hidden md:block md:w-1/2">
+          <img
+            src="https://i.pinimg.com/564x/cb/cb/db/cbcbdb6c48a5f2d423e87f2356540bc8.jpg" // Replace with your image URL
+            alt="KYC"
+            className="w-full h-auto rounded-2xl shadow-lg"
+          />
+        </div>
       </div>
+
+      {/* Notification Pop-up */}
+      {notification.message && (
+        <div className={`fixed top-10 right-10 p-4 rounded-lg shadow-lg text-white ${notification.type === "success" ? "bg-green-500" : "bg-red-500"}`}>
+          {notification.message}
+        </div>
+      )}
     </section>
   );
 }

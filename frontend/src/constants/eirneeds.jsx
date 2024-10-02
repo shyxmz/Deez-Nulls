@@ -40,22 +40,22 @@ export const testimonials = [
 
 export const features = [
   {
-    icon: <BotMessageSquare />,
-    text: "Grants Management",
+    icon: <BatteryCharging />,
+    text: "Push Notifications",
+    description:
+      "Keep startups informed with a robust messaging system, allowing admins to send important updates and information directly to users.",
+  },
+  {
+    icon: <PlugZap />,
+    text: "EIR Scheme Management",
+    description:
+      "Efficiently manage Entrepreneur-in-Residence programs, from application collection to selection status updates.",
+  },
+  {
+    icon: <GlobeLock />,
+    text: " Grants Management",
     description:
       "Comprehensive tools for managing grant schemes, including application processing, shortlisting, selection, and fund disbursement tracking.",
-  },
-  {
-    icon: <Fingerprint />,
-    text: "Progress Tracking",
-    description:
-      "Monitor and visualize the growth and development of startups over time with intuitive progress tracking tools.",
-  },
-  {
-    icon: <ShieldHalf />,
-    text: "Startup KYC Management",
-    description:
-      "Easily collect and manage crucial Know Your Customer information from startups, including company details, address, and contact information.",
   }
 ];
 
@@ -116,25 +116,19 @@ export const pricingOptions = [
 ];
 
 export const resourcesLinks = [
-  { href: "#", text: "Getting Started" },
-  { href: "#", text: "Documentation" },
-  { href: "#", text: "Tutorials" },
-  { href: "#", text: "API Reference" },
+  { href: "#", text: "FAQs" },
   { href: "#", text: "Community Forums" },
+  { href: "#", text: "Updates" }
 ];
 
 export const platformLinks = [
   { href: "#", text: "Features" },
-  { href: "#", text: "Supported Devices" },
-  { href: "#", text: "System Requirements" },
-  { href: "#", text: "Downloads" },
   { href: "#", text: "Release Notes" },
+  { href: "#", text: "Github" }
 ];
 
 export const communityLinks = [
   { href: "#", text: "Events" },
-  { href: "#", text: "Meetups" },
-  { href: "#", text: "Conferences" },
-  { href: "#", text: "Hackathons" },
-  { href: "#", text: "Jobs" },
+  { href: "#", text: "About Us" },
+  { href: "#", text: "Contact Us" },
 ];
