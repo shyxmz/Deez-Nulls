@@ -74,19 +74,28 @@ Get StartHub up and running in your ecosystem, and watch your startups reach for
 
 ---
 
+---
+
 ## 💻 How to Run the Code:
 
 1. **Clone the repository** to your local machine:
    ```bash
-   git clone <repo-link>
+   git clone https://github.com/shyxmz/Deez-Nulls.git
    ```
 
 2. **Open the project** in Visual Studio Code:
    ```bash
-   code <project-folder>
+   code Deez-Nulls
    ```
 
-3. **Open two terminals** and navigate to the backend and frontend folders:
+3. **Ensure you have the following installed**:
+
+   - [Node.js](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs)
+   - [Express.js](https://expressjs.com/en/starter/installing.html)
+   - [npm (Node Package Manager)](https://stackoverflow.com/questions/16000173/install-npm-node-js-package-manager-on-windows-w-o-using-node-js-msi)
+   - [Nodemon](https://www.npmjs.com/package/nodemon)
+
+4. **Open two terminals** and navigate to the backend and frontend folders:
    - Backend:
      ```bash
      cd backend
@@ -96,7 +105,17 @@ Get StartHub up and running in your ecosystem, and watch your startups reach for
      cd frontend
      ```
 
-4. **Set up environment variables**:
+5. **Install the required modules**:
+   - In the backend folder terminal:
+     ```bash
+     npm i
+     ```
+   - In the frontend folder terminal:
+     ```bash
+     npm i
+     ```
+
+6. **Set up environment variables**:
    - Create a new `.env` file in the backend folder and paste the following:
      ```
      PORT = 8080
@@ -104,21 +123,21 @@ Get StartHub up and running in your ecosystem, and watch your startups reach for
      JWT_SECRET = "secret-123"
      ```
 
-5. **Run the backend server**:
-   - In the terminal for the backend folder, run:
+7. **Run the backend server**:
+   - In the backend folder terminal, run:
      ```bash
      nodemon index.js
      ```
 
-6. **Start the frontend server**:
-   - In the terminal for the frontend folder, run:
+8. **Start the frontend server**:
+   - In the frontend folder terminal, run:
      ```bash
      npm start
      ```
 
-7. After completing these steps, the web application will be up and running. You can access it in your browser to explore and demo the features!
+9. After completing these steps, the web application will be up and running. You can access it in your browser to explore and demo the features!
 
- ---
+---
  
 ### Team Members:
 1. **Shyam Modi** - Frontend development, responsive UI components
