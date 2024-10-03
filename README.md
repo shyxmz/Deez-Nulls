@@ -1,7 +1,3 @@
-Here’s a refined version of the StartHub project overview and instructions to run the code:
-
----
-
 # 🚀 StartHub: Revolutionizing Startup Management
 
 ## 🌟 Ignite Your Startup Ecosystem
