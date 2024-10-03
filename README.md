@@ -56,7 +56,7 @@ In a sea of startup management tools, StartHub shines bright for several reasons
 ## 🚀 Tech Stack
 
 - **Frontend**: React with Tailwind CSS for sleek, responsive design
-- **Backend**: Node.js & Express.js for robust API handling
+- **Backend**: Node.js & Express.js for robust API handling, Socket.io for realtime communication
 - **Database**: MongoDB for flexible, scalable data storage
 - **Security**: JWT authentication to ensure secure data management
 
@@ -137,7 +137,7 @@ Get StartHub up and running in your ecosystem, and watch your startups reach for
  
 ### Team Members:
 1. **Shyam Modi** - Frontend development, responsive UI components
-2. **Aadi Patel** - Backend development, database schema, JWT integration
+2. **Aadi Patel** - Backend development, database schema, JWT integration and Socket.io for realtime communication
 3. **Yagyansh Gupta** - Backend development, database schema, presentation and demo creation
 4. **Krishna Suryawanshi** - Frontend development, UI/UX design, project documentation
 
