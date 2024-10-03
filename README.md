@@ -136,7 +136,7 @@ Get StartHub up and running in your ecosystem, and watch your startups reach for
 ---
  
 ### Team Members:
-1. **Shyam Modi** - Frontend development, responsive UI components
+1. **Shyam Modi** - Frontend development, responsive UI components, UI/UX design
 2. **Aadi Patel** - Backend development, database schema, JWT integration and Socket.io for realtime communication
 3. **Yagyansh Gupta** - Backend development, database schema, presentation and demo creation
 4. **Krishna Suryawanshi** - Frontend development, UI/UX design, project documentation
