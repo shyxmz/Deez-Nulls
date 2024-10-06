@@ -115,7 +115,7 @@ Get StartHub up and running in your ecosystem, and watch your startups reach for
    - Create a new `.env` file in the backend folder and paste the following:
      ```
      PORT = 8080
-     MONGO_URI = mongodb+srv://aadipatel1911:r6uYBeEmsP1moKM9@cluster0.lp33q.mongodb.net/Auth-db?retryWrites=true&w=majority&appName=Cluster0
+     MONGO_URI = your_mongo_url
      JWT_SECRET = "secret-123"
      ```
 
