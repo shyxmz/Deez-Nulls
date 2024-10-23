@@ -7,6 +7,8 @@ function ImageBox() {
       <div className="w-[80%] h-[80%] bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:border-4 hover:border-orange-500 transition-all duration-300">
         <img src={yourImage} alt="Description of the image" className="object-cover w-full h-full" />
       </div>
+      <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/10/23/08/20241023085748-2LQFIG7G.js"></script>
     </div>
   );
 }
